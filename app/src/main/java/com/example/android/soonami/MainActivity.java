@@ -186,9 +186,11 @@ public class MainActivity extends AppCompatActivity {
          * whole JSON response from the server.
          */
         private String readFromStream(InputStream inputStream) throws IOException {
+           //InputStream= a stream of bytes(small chunks of data)
             StringBuilder output = new StringBuilder();
             if (inputStream != null) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+                //BufferedReader= helps us to read the text from the InputStream
                 BufferedReader reader = new BufferedReader(inputStreamReader);
                 String line = reader.readLine();
                 while (line != null) {
