@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Returns new URL object from the given string URL.
          */
-        private URL createUrl(String stringUrl) {
+        private URL createUrl(String stringUrl) throws MalformedURLException {
             URL url = null;
             try {
                 url = new URL(stringUrl);
